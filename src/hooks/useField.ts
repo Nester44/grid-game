@@ -1,9 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ICell } from '../types'
 
 export const useField = (size: number) => {
-	const initialField = Array(size).fill(Array(size).fill(false))
-	const [field, setField] = useState<boolean[][]>(initialField)
+	const getInitialField = (size: number): boolean[][] =>
+		Array(size).fill(Array(size).fill(false))
+
+	const [field, setField] = useState<boolean[][]>(getInitialField(size))
+
+	// Check for size changing and creating new field
+	useEffect(() => {
+		setField(getInitialField(size))
+	}, [size])
 
 	const toggleCell = (x: number, y: number) => {
 		setField((prev) => {
