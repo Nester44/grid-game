@@ -6,7 +6,8 @@ type Props = {
 
 const ActiveList = ({ activeCells }: Props) => {
 	return (
-		<div className='flex flex-col gap-2'>
+		<div className='flex flex-col gap-2 max-h-[50rem] overflow-auto'>
+			<h2 className='text-2xl'>Active cells</h2>
 			{activeCells.map(({ x, y }) => (
 				<div
 					className='bg-yellow-500 border-yellow-700 border-2 p-2'
