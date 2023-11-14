@@ -9,9 +9,12 @@ export const useModes = () => {
 		const fetchModes = async () => {
 			setIsLoading(true)
 			try {
-				const response = (await fetch(url).then((res) =>
-					res.json(),
-				)) as IMode[]
+				const response = (await fetch(url).then((res) => {
+					if (!res.ok) {
+						return Promise.reject("Couldn't fetch modes")
+					}
+					return res.json()
+				})) as IMode[]
 				setModes(response)
 				setIsLoading(false)
 			} catch (error) {
