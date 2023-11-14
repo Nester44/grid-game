@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
+# Grid game test task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a test task implemented with React, Tailwind CSS and RadixUI. Follow the instructions below to get started.
 
-Currently, two official plugins are available:
+## Prerequisites
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/nester44/grid-game
+   ```
 
-## Expanding the ESLint configuration
+2. Navigate to the project directory:
+   ```bash
+   cd grid-game
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Install dependencies using Yarn:
+   ```bash
+   yarn
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+4. Start the development server:
+   ```bash
+   yarn dev
+   ```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Scripts
+- `yarn dev`: Start the development server.
+- `yarn build`: Build the production-ready app.
+- `yarn serve`: Serve the production build locally.
+
+## Feedback
+If you have any feedback or questions, feel free to [contact us](mailto:your.email@example.com).
+
+Happy coding!
