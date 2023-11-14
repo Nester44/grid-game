@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Button } from '../ui/button'
 import ModeSelect from './modeSelect'
 
@@ -6,10 +7,11 @@ type Props = {
 }
 
 const ModePicker = ({ setFieldSize }: Props) => {
+	const [localFieldSize, setLocalFieldSize] = useState(0)
 	return (
 		<div className='flex gap-4'>
-			<ModeSelect setFieldSize={setFieldSize} />
-			<Button>Start</Button>
+			<ModeSelect setLocalFieldSize={setLocalFieldSize} />
+			<Button onClick={() => setFieldSize(localFieldSize)}>Start</Button>
 		</div>
 	)
 }

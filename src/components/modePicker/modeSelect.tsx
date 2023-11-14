@@ -9,10 +9,10 @@ import {
 } from '../ui/select'
 
 type Props = {
-	setFieldSize: (size: number) => void
+	setLocalFieldSize: (size: number) => void
 }
 
-const ModeSelect = ({ setFieldSize }: Props) => {
+const ModeSelect = ({ setLocalFieldSize }: Props) => {
 	const options: IMode[] = [
 		{
 			name: 'Easy',
@@ -26,7 +26,7 @@ const ModeSelect = ({ setFieldSize }: Props) => {
 		},
 	]
 	return (
-		<Select onValueChange={(value) => setFieldSize(Number(value))}>
+		<Select onValueChange={(value) => setLocalFieldSize(Number(value))}>
 			<SelectTrigger className='w-[180px]'>
 				<SelectValue placeholder='Select a mode' />
 			</SelectTrigger>
