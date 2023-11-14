@@ -9,10 +9,18 @@ type Props = {
 const ModePicker = ({ setFieldSize }: Props) => {
 	const [localFieldSize, setLocalFieldSize] = useState(0)
 	return (
-		<div className='flex gap-4'>
-			<ModeSelect setLocalFieldSize={setLocalFieldSize} />
-			<Button onClick={() => setFieldSize(localFieldSize)}>Start</Button>
-		</div>
+		<>
+			<h2 className='text-lg'>
+				Grid and active cells list are scrollable (if they big enough)
+				for better UI
+			</h2>
+			<div className='flex gap-4'>
+				<ModeSelect setLocalFieldSize={setLocalFieldSize} />
+				<Button onClick={() => setFieldSize(localFieldSize)}>
+					Start
+				</Button>
+			</div>
+		</>
 	)
 }
 
