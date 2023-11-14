@@ -10,7 +10,7 @@ const ActiveList = ({ activeCells }: Props) => {
 			<h2 className='text-2xl'>Active cells</h2>
 			{activeCells.map(({ x, y }) => (
 				<div
-					className='bg-yellow-500 border-yellow-700 border-2 p-2'
+					className='bg-amber-500 border-yellow-700 border-2 p-2 rounded-md'
 					key={`active-${x}-${y}`}
 				>
 					Row: {y + 1} column: {x + 1}
