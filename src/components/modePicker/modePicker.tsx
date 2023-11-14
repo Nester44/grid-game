@@ -16,7 +16,10 @@ const ModePicker = ({ setFieldSize }: Props) => {
 			</h2>
 			<div className='flex gap-4'>
 				<ModeSelect setLocalFieldSize={setLocalFieldSize} />
-				<Button onClick={() => setFieldSize(localFieldSize)}>
+				<Button
+					disabled={localFieldSize === 0}
+					onClick={() => setFieldSize(localFieldSize)}
+				>
 					Start
 				</Button>
 			</div>
