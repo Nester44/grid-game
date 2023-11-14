@@ -10,7 +10,7 @@ const ModePicker = ({ setFieldSize }: Props) => {
 	const [localFieldSize, setLocalFieldSize] = useState(0)
 	return (
 		<>
-			<h2 className='text-lg'>
+			<h2 className='text-lg text-gray-500'>
 				Grid and active cells list are scrollable (if they big enough)
 				for better UI
 			</h2>
