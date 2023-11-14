@@ -14,19 +14,8 @@ export const useField = (size: number) => {
 
 	const toggleCell = (x: number, y: number) => {
 		setField((prev) => {
-			const newField = []
-			for (let i = 0; i < prev.length; i++) {
-				const row = []
-				for (let j = 0; j < prev[i].length; j++) {
-					const value = prev[i][j]
-					if (i !== y || j !== x) {
-						row.push(value)
-					} else {
-						row.push(!value)
-					}
-				}
-				newField.push(row)
-			}
+			const newField = JSON.parse(JSON.stringify(prev))
+			newField[y][x] = !newField[y][x]
 			return newField
 		})
 	}
