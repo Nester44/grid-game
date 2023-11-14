@@ -1,4 +1,4 @@
-import { IMode } from '@/types'
+import { useModes } from '@/hooks/useModes'
 import {
 	Select,
 	SelectContent,
@@ -13,26 +13,17 @@ type Props = {
 }
 
 const ModeSelect = ({ setLocalFieldSize }: Props) => {
-	const options: IMode[] = [
-		{
-			name: 'Easy',
-			field: 5,
-			id: '1',
-		},
-		{
-			name: 'Normal',
-			field: 10,
-			id: '2',
-		},
-	]
+	const { modes, isLoading } = useModes()
+
 	return (
 		<Select onValueChange={(value) => setLocalFieldSize(Number(value))}>
 			<SelectTrigger className='w-[180px]'>
 				<SelectValue placeholder='Select a mode' />
 			</SelectTrigger>
 			<SelectContent>
+				{isLoading && <div>Loading...</div>}
 				<SelectGroup>
-					{options.map((option) => (
+					{modes.map((option) => (
 						<SelectItem
 							key={option.id}
 							value={String(option.field)}
