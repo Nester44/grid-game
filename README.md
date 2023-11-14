@@ -36,6 +36,4 @@ Make sure you have the following installed on your machine:
 - `yarn serve`: Serve the production build locally.
 
 ## Feedback
-If you have any feedback or questions, feel free to [contact us](mailto:your.email@example.com).
-
-Happy coding!
+If you have any feedback or questions, feel free to [contact me](mailto:nesterov.mail4@gmail.com).
