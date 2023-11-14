@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ICell } from '../types'
 
 export const useField = (size: number) => {
 	const initialField = Array(size).fill(Array(size).fill(false))
@@ -22,7 +23,7 @@ export const useField = (size: number) => {
 		})
 	}
 
-	const activeCells = [] as { x: number; y: number }[]
+	const activeCells = [] as ICell[]
 
 	for (let y = 0; y < field.length; y++) {
 		for (let x = 0; x < field[0].length; x++) {
