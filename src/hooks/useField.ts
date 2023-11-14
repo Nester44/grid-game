@@ -18,10 +18,11 @@ export const useField = (size: number) => {
 			for (let i = 0; i < prev.length; i++) {
 				const row = []
 				for (let j = 0; j < prev[i].length; j++) {
+					const value = prev[i][j]
 					if (i !== y || j !== x) {
-						row.push(prev[i][j])
+						row.push(value)
 					} else {
-						row.push(!prev[i][j])
+						row.push(!value)
 					}
 				}
 				newField.push(row)
